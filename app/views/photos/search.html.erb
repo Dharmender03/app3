@@ -1,0 +1,7 @@
+<% @photo.each do |photo|%>
+        <% if photo.id.present? %>
+          <td><%= photo.image_file_name %>
+            <%=link_to 'Show',album_photo_path(album_id: @album.id, id: photo.id)%>
+          </td>
+        <%end%>
+      <%end%>

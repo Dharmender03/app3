@@ -1,0 +1,12 @@
+<h1>MyPhotos</h1>
+	
+     <td><%= image_tag(@photo.image.url, width: 100, height: 100)%><br>
+     </td>
+     <%= link_to 'Tags#', album_photo_path(@album, @photo)%>
+     <%#aaj29%>
+     <%= @photo.tags.map(&:title).join(",")%><br>
+
+     <%= link_to 'Edit', edit_album_photo_path(@album, @photo)%><br>
+
+    <%= link_to 'Delete', album_photo_path(@album, @photo), method: :delete%><br>
+	
